@@ -17,14 +17,31 @@ public:
 
    void push(int x){
 
+      if(current_size==max_size-1){
+        return;
+      }
+      a[current_size++]=x;
+      return;
+
    }
 
+   void display(){
+       cout<<current_size;
+    for(int i=0;i<current_size;i++){
+        cout<<a[i]<<" ";
+    }
+   }
 };
 
 
 
 int main()
 {
-    cout << (9<9);
+    Stack s(10);
+    s.push(10);
+    s.push(10);
+    s.push(10);
+    s.push(10);
+    s.display();
     return 0;
 }
