@@ -11,7 +11,7 @@ int current_size;
 public:
     Stack(int val){
      this->a=new int[val];
-     this->max_size=0;
+     this->max_size=val;
      this->current_size=0;
     }
 
@@ -27,7 +27,7 @@ public:
 
     void pop(){
       if(isEmpty()){
-        return 0;
+        return ;
       }
       a[current_size--];
     }
@@ -41,7 +41,7 @@ public:
     }
 
     bool isFull(){
-    if(current_size==max_size-1){
+    if(current_size==max_size&&current_size!=0){
         return true;
       }
       return false;
@@ -65,5 +65,18 @@ public:
 int main()
 {
 
+   Stack s(5);
+   cout<<s.isEmpty()<<endl;
+   cout<<s.isFull()<<endl;
+   s.push(10);
+   s.push(10);
+   s.push(10);
+   s.push(10);
+   s.push(10);
+   s.pop();
+   s.pop();
+   cout<<s.top();
+   s.display();
+   cout<<s.isFull()<<endl;
     return 0;
 }
