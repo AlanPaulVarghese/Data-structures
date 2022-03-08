@@ -25,6 +25,13 @@ public:
 
    }
 
+    void pop(){
+      if(current_size==0){
+        return 0;
+      }
+      a[current_size--];
+    }
+
     void display(){
     for(int i=0;i<current_size;i++){
         cout<<a[i]<<" ";
