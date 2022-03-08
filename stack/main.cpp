@@ -47,7 +47,7 @@ public:
       return false;
     }
     T top(){
-     return a[current_size];
+     return a[current_size-1];
     }
 
     void display(){
@@ -64,6 +64,23 @@ public:
 
 int main()
 {
+   string sen;
+   getline(cin,sen);
+   Stack<char>s(sen.size());
+   for(int i=0;i<sen.size();i++){
+    if(sen[i]==' '){
+        s.push(' ');
+        continue;
+    }
+    s.push(sen[i]);
+   }
+   sen="";
+   int i=0;
+   while(!s.isEmpty()){
+    sen.push_back(s.top());
+    s.pop();
+   }
 
+   cout<<sen;
      return 0;
 }
