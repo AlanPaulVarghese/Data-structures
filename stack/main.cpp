@@ -55,32 +55,41 @@ public:
         cout<<a[i]<<" ";
     }
 
-
-
    }
+
+
+   void addAtBottom(T e){
+
+    if(isEmpty()){
+        push(e);
+        return;
+    }
+
+    T te=top();
+    pop();
+    addAtBottom(e);
+    push(te);
+    }
+
+    void rev(){
+
+     if(isEmpty()){
+        return;
+     }
+
+     T e=top();
+     pop();
+     rev();
+     addAtBottom(e);
+    }
+
 };
 
 
 
 int main()
 {
-   string sen;
-   getline(cin,sen);
-   Stack<char>s(sen.size());
-   for(int i=0;i<sen.size();i++){
-    if(sen[i]==' '){
-        s.push(' ');
-        continue;
-    }
-    s.push(sen[i]);
-   }
-   sen="";
-   int i=0;
-   while(!s.isEmpty()){
-    sen.push_back(s.top());
-    s.pop();
-   }
 
-   cout<<sen;
-     return 0;
+
+
 }
