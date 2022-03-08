@@ -32,6 +32,10 @@ public:
       a[current_size--];
     }
 
+    int top(){
+     return a[current_size];
+    }
+
     void display(){
     for(int i=0;i<current_size;i++){
         cout<<a[i]<<" ";
