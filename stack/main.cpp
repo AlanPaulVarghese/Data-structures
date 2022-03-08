@@ -26,10 +26,18 @@ public:
    }
 
     void pop(){
-      if(current_size==0){
+      if(isEmpty()){
         return 0;
       }
       a[current_size--];
+    }
+
+    bool isEmpty(){
+    if(current_size==0){
+     return true;
+    }
+
+    return false;
     }
 
     int top(){
