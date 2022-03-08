@@ -2,20 +2,20 @@
 
 using namespace std;
 
-
+template <typename T>
 class Stack{
 
-int* a;
+T* a;
 int max_size;
 int current_size;
 public:
-    Stack(int val){
-     this->a=new int[val];
+    Stack(T val){
+     this->a=new T[val];
      this->max_size=val;
      this->current_size=0;
     }
 
-   void push(int x){
+   void push(T x){
 
       if(isFull()){
         return;
@@ -46,7 +46,7 @@ public:
       }
       return false;
     }
-    int top(){
+    T top(){
      return a[current_size];
     }
 
@@ -65,18 +65,5 @@ public:
 int main()
 {
 
-   Stack s(5);
-   cout<<s.isEmpty()<<endl;
-   cout<<s.isFull()<<endl;
-   s.push(10);
-   s.push(10);
-   s.push(10);
-   s.push(10);
-   s.push(10);
-   s.pop();
-   s.pop();
-   cout<<s.top();
-   s.display();
-   cout<<s.isFull()<<endl;
-    return 0;
+     return 0;
 }
