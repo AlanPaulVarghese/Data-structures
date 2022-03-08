@@ -17,7 +17,7 @@ public:
 
    void push(int x){
 
-      if(current_size==max_size-1){
+      if(isFull()){
         return;
       }
       a[current_size++]=x;
@@ -40,6 +40,12 @@ public:
     return false;
     }
 
+    bool isFull(){
+    if(current_size==max_size-1){
+        return true;
+      }
+      return false;
+    }
     int top(){
      return a[current_size];
     }
