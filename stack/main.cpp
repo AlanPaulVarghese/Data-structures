@@ -25,11 +25,13 @@ public:
 
    }
 
-   void display(){
-       cout<<current_size;
+    void display(){
     for(int i=0;i<current_size;i++){
         cout<<a[i]<<" ";
     }
+
+
+
    }
 };
 
@@ -37,11 +39,6 @@ public:
 
 int main()
 {
-    Stack s(10);
-    s.push(10);
-    s.push(10);
-    s.push(10);
-    s.push(10);
-    s.display();
+
     return 0;
 }
