@@ -36,7 +36,11 @@ public:
         cout<<a[i]<<" ";
     }
 
-    }
+   }
+
+   int peek(){
+   return a[Rear];
+   }
 
 };
 
@@ -45,11 +49,6 @@ public:
 
 int main()
 {
-    Queue q(10);
-    q.enqueue(1);
-    q.enqueue(2);
-    q.enqueue(3);
-    q.enqueue(4);
-    q.display();
+
     return 0;
 }
